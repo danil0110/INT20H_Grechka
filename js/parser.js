@@ -5,7 +5,7 @@ let resultArray = [];
 
 async function findProduct(product) {
   const shops = ['metro', 'varus', 'eko']; //, 'auchan', 'megamarket', 'novus', 'furshet', 'citymarket'];
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   await visitShops(shops);
   browser.close();
 
