@@ -1,0 +1,23 @@
+.shop-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 350px;
+    border: 1px red solid;
+}
+
+.shop-item-info {
+    padding: 10px;
+}
+
+.item-price span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
