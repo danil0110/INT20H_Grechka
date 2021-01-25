@@ -7,6 +7,8 @@ async function findProduct(product) {
   const shops = ['metro', 'varus', 'eko']; //, 'auchan', 'megamarket', 'novus', 'furshet', 'citymarket'];
   const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   await visitShops(shops);
+  return resultArray;
+
   browser.close();
 
   async function visitShops(shops) {
@@ -29,11 +31,20 @@ async function parsePage(browser, shop, product) {
     obj.name = item.querySelector("span.product-tile__title").textContent;
     obj.price = item.querySelector("span.Price__value_caption").textContent;
     obj.link = `https://${shop}.zakaz.ua/uk` + item.querySelector('a').href;
-    console.log(`${shop} ${index + 1}) ${obj.name}, ${obj.price}, ${obj.img}, ${obj.link}`);
+    //console.log(`${shop} ${index + 1}) ${obj.name}, ${obj.price}, ${obj.img}, ${obj.link}`);
     resultArray.push(obj);
   });
+
 }
+
 
 (async () => {
   await findProduct('крупа гречана');
 })();
+
+exports.parsePage = parsePage;
+exports.findProduct = findProduct;
+
+
+
+
