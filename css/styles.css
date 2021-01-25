@@ -1,16 +1,27 @@
-.shop-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 20px;
+.form-product-search {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.form-product-search input {
+    margin-left: 0;
+    width: 200px;
+    padding: 5px;
 }
 
 .shop-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 200px;
+    width: 13rem;
     height: 350px;
     border: 1px red solid;
+}
+
+.shop-item img {
+    width: 100px;
 }
 
 .shop-item-info {
