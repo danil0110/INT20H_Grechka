@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.form-product-search {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.form-product-search input {
+    margin-left: 0;
+    width: 400px;
+    padding: 5px;
+}
+
+.shop-wrapper > div {
+    margin-bottom: 20px;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15rem;
+    height: 350px;
+    border: 1px red solid;
+}
+
+.shop-item-info {
+    padding: 10px;
+}
+
+.item-price span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
