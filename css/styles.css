@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .form-product-search {
     display: flex;
     justify-content: center;
@@ -7,21 +11,21 @@
 
 .form-product-search input {
     margin-left: 0;
-    width: 200px;
+    width: 400px;
     padding: 5px;
+}
+
+.shop-wrapper > div {
+    margin-bottom: 20px;
 }
 
 .shop-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 13rem;
+    width: 15rem;
     height: 350px;
     border: 1px red solid;
-}
-
-.shop-item img {
-    width: 100px;
 }
 
 .shop-item-info {
